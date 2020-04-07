@@ -11,9 +11,10 @@ const getDocumentPath = date => getFilePath(date, DOCUMENT_NAME);
 
 // make sure documents folder exists
 (() => {
+	console.log("Creating document folder...");
     const fs = require('fs');
     if (!fs.existsSync(DOC_FOLDER)) fs.mkdirSync(DOC_FOLDER);
-});
+})();
 
 module.exports = {
     statement: getStatementPath,
