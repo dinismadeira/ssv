@@ -42,7 +42,7 @@ module.exports = async () => {
     console.log("Go to login page...");
     await pp.submit(page, '#login_btn_1');
 
-    await pp.closePopup(page, '#zeroHPModalPanel input');
+    await pp.closePopup(page, '#zeroHPModalPanel input, a[href*="fechar"]');
     
     // type password
     await page.type('#passwordInput', CGD_LOGIN_PWD);
