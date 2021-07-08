@@ -20,6 +20,7 @@ const login = async page => {
     await page.type('#password', SS_LOGIN_PWD);
     console.log("Login...");
     await pp.submit(page, `input[name="submitBtn"]`);
+    await pp.closePopup("popupsForm:btnCancelar");
 };
 
 const searchDocument = async (page, issued) => {
