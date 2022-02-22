@@ -31,7 +31,7 @@ module.exports = async () => {
     console.log("Go to CGD...");
     await pp.load(page, CGD_LOGIN_URL);
 	
-	await pp.closePopup(page, '.fechar');
+	await pp.closePopup(page, '#onetrust-accept-btn-handler');
     await pp.sleep(1000);
     
 	await page.click(`.direct-link.mobile`);
